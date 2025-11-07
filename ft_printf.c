@@ -6,7 +6,7 @@
 /*   By: stee <stee@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 14:34:37 by stee              #+#    #+#             */
-/*   Updated: 2025/11/07 16:40:50 by stee             ###   ########.fr       */
+/*   Updated: 2025/11/07 17:20:43 by stee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ static void	ft_handle(const char flag, const va_list args)
 		ft_putchar(va_arg(args, char));
 	if (flag == 's')
 		ft_putstr(va_arg(args, char *));
-	if (flag == 'i')
+	if (flag == 'i' || flag == 'd')
 		ft_putnbr(va_arg(args, int));
-	if (flag == 'd' || flag == 'u')
-		ft_putdouble(va_arg(args, double));
+	if (flag == 'u')
+		ft_putnbr(va_arg(args, unsigned int));
 	if (flag == '%')
 		ft_putchar('%');
 	if (flag == 'p')
