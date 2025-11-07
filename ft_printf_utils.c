@@ -6,7 +6,7 @@
 /*   By: stee <stee@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 16:12:28 by stee              #+#    #+#             */
-/*   Updated: 2025/11/07 16:40:27 by stee             ###   ########.fr       */
+/*   Updated: 2025/11/07 17:29:41 by stee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,3 @@ char	*ft_tohexa(const int arg, const char flag)
 		return (int_str);
 	return (ft_toupper(int_str));
 }
-

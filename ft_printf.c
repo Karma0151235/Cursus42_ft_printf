@@ -6,7 +6,7 @@
 /*   By: stee <stee@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 14:34:37 by stee              #+#    #+#             */
-/*   Updated: 2025/11/07 17:20:43 by stee             ###   ########.fr       */
+/*   Updated: 2025/11/07 17:29:26 by stee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int	ft_printf(const char *s, ...)
 {
 	int		i;
 	va_list	args;
-	va_start(args, s);
 
+	va_start(args, s);
 	i = 0;
 	while (s[i] != '\0')
 	{

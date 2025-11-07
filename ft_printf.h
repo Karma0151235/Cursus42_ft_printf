@@ -6,14 +6,14 @@
 /*   By: stee <stee@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 16:09:53 by stee              #+#    #+#             */
-/*   Updated: 2025/11/07 17:23:07 by stee             ###   ########.fr       */
+/*   Updated: 2025/11/07 17:29:52 by stee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include <stdarg.h>
-#include "libft.h"
+# include <stdarg.h>
+# include "libft.h"
 
 #endif
