@@ -12,42 +12,45 @@
 
 #include "ft_printf.h"
 
-static void	ft_handle(const char flag, const va_list args)
+int	ft_handle(const char flag, va_list args)
 {
 	if (flag == 'c')
-		ft_putchar(va_arg(args, char));
+		return (ft_putchar_PF((char)va_arg(args, int)));
 	if (flag == 's')
-		ft_putstr(va_arg(args, char *));
+		return (ft_putstr_PF(va_arg(args, char *)));
 	if (flag == 'i' || flag == 'd')
-		ft_putnbr(va_arg(args, int));
+		return (ft_putnbr_PF(va_arg(args, int)));
 	if (flag == 'u')
-		ft_putnbr(va_arg(args, unsigned int));
+		return (ft_putunbr_PF(va_arg(args, unsigned int)));
 	if (flag == '%')
-		ft_putchar('%');
+		return (ft_putchar_PF('%'));
 	if (flag == 'p')
-		ft_putptr(va_arg(args, void *));
+		return (ft_putptr_PF(va_arg(args, void *)));
 	if (flag == 'x' || flag == 'X')
-		ft_putstr(ft_tohexa(va_arg(args, int), flag));
+		return (ft_puthexa_PF(va_arg(args, unsigned int), flag));
+	return (0);
 }
 
 int	ft_printf(const char *s, ...)
 {
 	int		i;
+	int		bytes;
 	va_list	args;
 
 	va_start(args, s);
 	i = 0;
+	bytes = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == '%' && s[i + 1] != '\0')
 		{
-			ft_handle(s[i + 1], args);
+			bytes += ft_handle(s[i + 1], args);
 			i++;
 		}
 		else
-			ft_putchar(s[i]);
+			bytes += ft_putchar_PF(s[i]);
 		i++;
 	}
-	va_end(list);
-	return (i);
+	va_end(args);
+	return (bytes);
 }
