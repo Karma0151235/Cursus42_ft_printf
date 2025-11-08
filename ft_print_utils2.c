@@ -39,13 +39,13 @@ static char	*ft_uitoa(unsigned int n)
 	return (str);
 }
 
-int	ft_putunbr_PF(unsigned int n)
+int	ft_putunbr_pf(unsigned int n)
 {
 	char	*str;
 	int		bytes;
 
 	str = ft_uitoa(n);
-	bytes = ft_putstr_PF(str);
+	bytes = ft_putstr_pf(str);
 	free (str);
 	return (bytes);
 }

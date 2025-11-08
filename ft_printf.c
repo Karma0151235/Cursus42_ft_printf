@@ -15,19 +15,19 @@
 int	ft_handle(const char flag, va_list args)
 {
 	if (flag == 'c')
-		return (ft_putchar_PF((char)va_arg(args, int)));
+		return (ft_putchar_pf((char)va_arg(args, int)));
 	if (flag == 's')
-		return (ft_putstr_PF(va_arg(args, char *)));
+		return (ft_putstr_pf(va_arg(args, char *)));
 	if (flag == 'i' || flag == 'd')
-		return (ft_putnbr_PF(va_arg(args, int)));
+		return (ft_putnbr_pf(va_arg(args, int)));
 	if (flag == 'u')
-		return (ft_putunbr_PF(va_arg(args, unsigned int)));
+		return (ft_putunbr_pf(va_arg(args, unsigned int)));
 	if (flag == '%')
-		return (ft_putchar_PF('%'));
+		return (ft_putchar_pf('%'));
 	if (flag == 'p')
-		return (ft_putptr_PF(va_arg(args, void *)));
+		return (ft_putptr_pf(va_arg(args, void *)));
 	if (flag == 'x' || flag == 'X')
-		return (ft_puthexa_PF(va_arg(args, unsigned int), flag));
+		return (ft_puthexa_pf(va_arg(args, unsigned int), flag));
 	return (0);
 }
 
@@ -48,7 +48,7 @@ int	ft_printf(const char *s, ...)
 			i++;
 		}
 		else
-			bytes += ft_putchar_PF(s[i]);
+			bytes += ft_putchar_pf(s[i]);
 		i++;
 	}
 	va_end(args);

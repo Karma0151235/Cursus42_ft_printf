@@ -12,21 +12,21 @@
 
 #include "ft_printf.h"
 
-int	ft_putchar_PF(char c)
+int	ft_putchar_pf(char c)
 {
 	ft_putchar(c);
 	return (1);
 }
 
-int	ft_putstr_PF(char *s)
+int	ft_putstr_pf(char *s)
 {
 	if (!s)
-		return (ft_putstr_PF("(null)"));
+		return (ft_putstr_pf("(null)"));
 	ft_putstr(s);
 	return (ft_strlen(s));
 }
 
-int	ft_puthexa_PF(unsigned long arg, const char flag)
+int	ft_puthexa_pf(unsigned long arg, const char flag)
 {
 	char	*base;
 	int		bytes;
@@ -39,7 +39,7 @@ int	ft_puthexa_PF(unsigned long arg, const char flag)
 		base = "0123456789abcdef";
 	bytes = 0;
 	if (arg == 0)
-		return (ft_putchar_PF('0'));
+		return (ft_putchar_pf('0'));
 	i = 0;
 	while (arg > 0)
 	{
@@ -47,29 +47,29 @@ int	ft_puthexa_PF(unsigned long arg, const char flag)
 		arg /= 16;
 	}
 	while (i-- > 0)
-		bytes += ft_putchar_PF(buffer[i]);
+		bytes += ft_putchar_pf(buffer[i]);
 	return (bytes);
 }
 
-int	ft_putnbr_PF(int c)
+int	ft_putnbr_pf(int c)
 {
 	int		i;
 	char	*str;
 
 	str = ft_itoa(c);
-	i = ft_putstr_PF(str);
+	i = ft_putstr_pf(str);
 	free (str);
 	return (i);
 }
 
-int	ft_putptr_PF(void *ptr)
+int	ft_putptr_pf(void *ptr)
 {
 	int				bytes;
 
 	if (!ptr)
-		return (ft_putstr_PF("(nil)"));
+		return (ft_putstr_pf("(nil)"));
 	bytes = 0;
-	bytes += ft_putstr_PF("0x");
-	bytes += ft_puthexa_PF((unsigned long) ptr, 'x');
+	bytes += ft_putstr_pf("0x");
+	bytes += ft_puthexa_pf((unsigned long) ptr, 'x');
 	return (bytes);
 }
