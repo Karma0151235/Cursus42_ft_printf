@@ -1,2 +1,43 @@
 # Cursus42_ft_printf
 This repository contains the ft_printf project from the 42 Cursus.
+
+# Overview
+`ft_printf` is one of the second-level projects in the 42 Cursus, following `libft`, `get_next_line`, and `Born2BeRoot`. The purpose of this project is simple; to recreate the functionality of the `printf` function from standard I/O library (`<stdio.h>`). This project does not encompass all functionalities, but the crux of the function is replicated.
+
+# Supported Format Specifiers
+As afforementioned, the function created within the scope of this project only accounts for a number of specifiers, this segment will list and explain each one.
+
+| Specifier   | Description                             |
+| ----------- | --------------------------------------- |
+| `%c`        | Prints a single character               |
+| `%s`        | Prints a string                         |
+| `%p`        | Prints a pointer address in hexadecimal |
+| `%d` / `%i` | Prints a signed decimal integer         |
+| `%u`        | Prints an unsigned decimal integer      |
+| `%x`        | Prints a lowercase hexadecimal integer  |
+| `%X`        | Prints an uppercase hexadecimal integer |
+| `%%`        | Prints a literal percent sign           |
+
+# Running and Testing
+
+## Compilation
+A makefile has been included to ease the compilation process. The makefile creates a library containing the `printf` function named `libftprintf.a`. Below are some rules specified in the makefile for ease of use.
+
+`make` - Simply creates the library.
+`make clean` - Removes object files.
+`make fclean` - Removes object files and the library file (*.a).
+`make re` - Executes `make fclean && make` consecutively.
+
+## Testing
+
+
+# Learning Outcomes
+
+This project's main "teaching point" was variadic functions. Specifically these refer to the collection of functions in the `<stdarg.h>` library. Beyond this, it also builds on the "modularity" and "readability" thinking that has been building over the past projects. 
+
+# Author
+
+**Karma0151235**
+
+42 Kuala Lumpur | Sunway University | Lancaster University 
+
