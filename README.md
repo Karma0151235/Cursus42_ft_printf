@@ -24,10 +24,10 @@ This section describes the post git-clone process of compiling and testing that 
 ## Compilation
 A makefile has been included to ease the compilation process. The makefile creates a library containing the `printf` function named `libftprintf.a`. Below are some rules specified in the makefile for ease of use.
 
-`make` - Simply creates the library.
-`make clean` - Removes object files.
-`make fclean` - Removes object files and the library file (*.a).
-`make re` - Executes `make fclean && make` consecutively.
+`make` - Simply creates the library. <br>
+`make clean` - Removes object files. <br>
+`make fclean` - Removes object files and the library file (*.a). <br>
+`make re` - Executes `make fclean && make` consecutively. <br>
 
 ## Testing
 
