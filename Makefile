@@ -12,9 +12,13 @@
 
 NAME = libftprintf.a
 
-LIBFTDIR = Libft
+LIBFTDIR = libft
 
-SRC = 
+LIBFT = $(LIBFTDIR)/libft.a
+
+SRC = ft_printf.c \
+	ft_printf_utils.c \
+	ft_printf_utils2.c
 
 OBJS = ${SRC:.c=.o}
 
