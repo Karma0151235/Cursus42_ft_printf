@@ -30,7 +30,7 @@ A makefile has been included to ease the compilation process. The makefile creat
 `make re` - Executes `make fclean && make` consecutively. <br>
 
 ## Testing
-
+Similar to previous projects, a community supported tester was used to validate the results before submission. The tester used can be accessed in this repository through this link: https://github.com/Tripouille/printfTester#
 
 # Learning Outcomes
 
