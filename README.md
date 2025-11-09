@@ -19,6 +19,7 @@ As afforementioned, the function created within the scope of this project only a
 | `%%`        | Prints a literal percent sign           |
 
 # Running and Testing
+This section describes the post git-clone process of compiling and testing that you can replicate. Furthermore, more details are entailed regarding the makefile to ensure ease of use.
 
 ## Compilation
 A makefile has been included to ease the compilation process. The makefile creates a library containing the `printf` function named `libftprintf.a`. Below are some rules specified in the makefile for ease of use.
