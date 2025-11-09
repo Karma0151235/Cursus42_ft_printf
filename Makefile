@@ -14,8 +14,6 @@ NAME = libftprintf.a
 
 LIBFTDIR = libft
 
-LIBFT = $(LIBFTDIR)/libft.a
-
 SRC = ft_printf.c \
 	ft_printf_utils.c \
 	ft_printf_utils2.c
@@ -28,7 +26,12 @@ CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
+LIBFT = $(LIBFTDIR)/libft.a
+
 all: ${NAME}
+
+%.o: %.c
+	${CC} ${CFLAGS} -I. -I${LIBFTDIR} -c $< -o $@
 
 ${LIBFT}:
 	${MAKE} -C ${LIBFTDIR}
@@ -36,9 +39,6 @@ ${LIBFT}:
 ${NAME}: ${LIBFT} ${OBJS} 
 	cp ${LIBFT} ${NAME}
 	ar rcs ${NAME} ${OBJS}
-
-%.o: %.c
-	${CC} ${CFLAGS} -I. -I${LIBFTDIR} -c $< -o $@
 
 clean:
 	${RM} ${OBJS}
